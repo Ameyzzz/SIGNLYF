@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#0a0a0a">
+
+    <meta
+        name="description"
+        content="AI-powered communication between ASL and speech.">
+
+    <!-- PWA -->
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes">
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes">
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent">
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="SIGNLYF">
+
+    <link
+        rel="manifest"
+        href="manifest.json">
+
+    <title>SIGNLYF</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo">
+
+            SIGN<span>LYF</span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a
+                href="index.html"
+                class="active">
+
+                Home
+
+            </a>
+
+            <a href="pages/asl-to-speech.html">
+                ASL → Speech
+            </a>
+
+            <a href="pages/speech-to-asl.html">
+                Speech → ASL
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <p class="eyebrow">
+                AI COMMUNICATION PLATFORM
+            </p>
+
+            <h1>
+                Communication
+                <span>without barriers.</span>
+            </h1>
+
+            <p class="hero-description">
+                SIGNLYF connects American Sign Language
+                and spoken communication using Machine learning.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             MODES
+        ========================== -->
+
+        <section class="modes">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    COMMUNICATION MODES
+                </p>
+
+                <h2>
+                    Choose how you want to communicate.
+                </h2>
+
+            </div>
+
+
+            <div class="mode-grid">
+
+
+                <!-- ASL → SPEECH -->
+
+                <div class="mode-card">
+
+                    <div class="mode-number">
+                        01
+                    </div>
+
+                    <h3>
+                        ASL → Speech
+                    </h3>
+
+                    <p>
+                        Use your camera to translate
+                        American Sign Language into
+                        spoken communication.
+                    </p>
+
+                    <button
+                        class="mode-button"
+                        onclick="openMode('asl-to-speech')">
+
+                        Open Mode
+                        →
+
+                    </button>
+
+                </div>
+
+
+                <!-- SPEECH → ASL -->
+
+                <div class="mode-card">
+
+                    <div class="mode-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Speech → ASL
+                    </h3>
+
+                    <p>
+                        Speak or type naturally and
+                        convert your communication
+                        into American Sign Language.
+                    </p>
+
+                    <button
+                        class="mode-button"
+                        onclick="openMode('speech-to-asl')">
+
+                        Open Mode
+                        →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="about">
+
+            <p class="eyebrow">
+                ABOUT SIGNLYF
+            </p>
+
+            <h2>
+                Technology that makes
+                communication more accessible.
+            </h2>
+
+            <p>
+                SIGNLYF is an AI-powered communication
+                platform designed to bridge the gap
+                between sign language and speech.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <span>
+            SIGN<span>LYF</span>
+        </span>
+
+        <span>
+            AI COMMUNICATION
+        </span>
+
+    </footer>
+
+
+    <!-- =========================
+         MOBILE NAVIGATION
+    ========================== -->
+
+    <nav class="mobile-nav">
+
+        <a
+            href="index.html"
+            class="mobile-nav-item active">
+
+            <span>⌂</span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="pages/asl-to-speech.html"
+            class="mobile-nav-item">
+
+            <span>◉</span>
+
+            <small>
+                ASL
+            </small>
+
+        </a>
+
+
+        <a
+            href="pages/speech-to-asl.html"
+            class="mobile-nav-item">
+
+            <span>◌</span>
+
+            <small>
+                Speech
+            </small>
+
+        </a>
+
+    </nav>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

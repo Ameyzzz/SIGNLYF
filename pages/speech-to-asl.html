@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#0a0a0a">
+
+    <meta
+        name="description"
+        content="SIGNLYF Speech to ASL">
+
+    <!-- PWA -->
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes">
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes">
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent">
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="SIGNLYF">
+
+    <link
+        rel="manifest"
+        href="../manifest.json">
+
+    <title>Speech → ASL | SIGNLYF</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/modes.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a
+            href="../index.html"
+            class="logo">
+
+            SIGN<span>LYF</span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="asl-to-speech.html">
+                ASL → Speech
+            </a>
+
+            <a
+                href="speech-to-asl.html"
+                class="active">
+
+                Speech → ASL
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="mode-page">
+
+
+        <!-- HEADER -->
+
+        <section class="mode-header">
+
+            <p class="eyebrow">
+                MODE 02
+            </p>
+
+            <h1>
+                Speech → ASL
+            </h1>
+
+            <p>
+                Speak or type naturally and SIGNLYF
+                will convert your communication into
+                American Sign Language.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             TRANSLATOR
+        ========================== -->
+
+        <section class="translator">
+
+
+            <!-- ASL ANIMATION -->
+
+            <div class="camera-container">
+
+                <div class="camera-header">
+
+                    <span>
+                        ASL ANIMATION
+                    </span>
+
+                    <span
+                        id="animation-status"
+                        class="status">
+
+                        READY
+
+                    </span>
+
+                </div>
+
+
+                <div class="camera-view">
+
+                    <div
+                        id="asl-player"
+                        class="asl-player">
+
+                        <div class="player-symbol">
+                            SIGN
+                        </div>
+
+                        <p>
+                            ASL animation will appear here
+                        </p>
+
+                        <small>
+                            Animation engine not connected
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="camera-controls">
+
+                    <button
+                        id="play-button"
+                        class="primary-button">
+
+                        Play
+
+                    </button>
+
+
+                    <button
+                        id="pause-button"
+                        class="secondary-button">
+
+                        Pause
+
+                    </button>
+
+
+                    <button
+                        id="replay-button"
+                        class="secondary-button">
+
+                        Replay
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="output-container">
+
+                <div class="output-header">
+
+                    <span>
+                        INPUT
+                    </span>
+
+                    <span>
+                        SPEECH / TEXT
+                    </span>
+
+                </div>
+
+
+                <!-- TEXT INPUT -->
+
+                <div class="speech-input">
+
+                    <textarea
+                        id="speech-text"
+                        placeholder="Type something here..."
+                        rows="5"></textarea>
+
+                </div>
+
+
+                <!-- MICROPHONE -->
+
+                <div class="microphone-area">
+
+                    <button
+                        id="microphone-button"
+                        class="mic-button">
+
+                        <span class="mic-icon">
+                            MIC
+                        </span>
+
+                        <span>
+                            Start Speaking
+                        </span>
+
+                    </button>
+
+
+                    <p id="mic-status">
+                        Microphone is off
+                    </p>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="output-actions">
+
+                    <button
+                        id="translate-button"
+                        class="primary-button">
+
+                        Translate to ASL
+
+                    </button>
+
+
+                    <button
+                        id="clear-button"
+                        class="secondary-button">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="detection-info">
+
+                    <div>
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <strong id="translation-status">
+                            Waiting
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ENGINE
+                        </span>
+
+                        <strong>
+                            Not connected
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MOBILE NAVIGATION
+    ========================== -->
+
+    <nav class="mobile-nav">
+
+        <a
+            href="../index.html"
+            class="mobile-nav-item">
+
+            <span>⌂</span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="asl-to-speech.html"
+            class="mobile-nav-item">
+
+            <span>◉</span>
+
+            <small>
+                ASL
+            </small>
+
+        </a>
+
+
+        <a
+            href="speech-to-asl.html"
+            class="mobile-nav-item active">
+
+            <span>◌</span>
+
+            <small>
+                Speech
+            </small>
+
+        </a>
+
+    </nav>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/speech-to-asl.js"></script>
+
+</body>
+
+</html>

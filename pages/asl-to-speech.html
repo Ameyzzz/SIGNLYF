@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#0a0a0a">
+
+    <meta
+        name="description"
+        content="SIGNLYF ASL to Speech">
+
+    <!-- PWA -->
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes">
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes">
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent">
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="SIGNLYF">
+
+    <link
+        rel="manifest"
+        href="../manifest.json">
+
+    <title>ASL → Speech | SIGNLYF</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/modes.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a
+            href="../index.html"
+            class="logo">
+
+            SIGN<span>LYF</span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a
+                href="asl-to-speech.html"
+                class="active">
+
+                ASL → Speech
+
+            </a>
+
+            <a href="speech-to-asl.html">
+                Speech → ASL
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="mode-page">
+
+
+        <!-- HEADER -->
+
+        <section class="mode-header">
+
+            <p class="eyebrow">
+                MODE 01
+            </p>
+
+            <h1>
+                ASL → Speech
+            </h1>
+
+            <p>
+                Use your camera to communicate
+                using American Sign Language.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             TRANSLATOR
+        ========================== -->
+
+        <section class="translator">
+
+
+            <!-- CAMERA -->
+
+            <div class="camera-container">
+
+                <div class="camera-header">
+
+                    <span>
+                        CAMERA
+                    </span>
+
+                    <span
+                        id="camera-status"
+                        class="status">
+
+                        OFFLINE
+
+                    </span>
+
+                </div>
+
+
+                <div class="camera-view">
+
+                    <video
+                        id="camera"
+                        autoplay
+                        playsinline
+                        muted>
+                    </video>
+
+
+                    <div
+                        id="camera-placeholder"
+                        class="camera-placeholder">
+
+                        <div class="camera-icon">
+                            +
+                        </div>
+
+                        <p>
+                            Camera is currently off
+                        </p>
+
+                        <small>
+                            Allow camera access to begin
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="camera-controls">
+
+                    <button
+                        id="start-camera"
+                        class="primary-button">
+
+                        Start Camera
+
+                    </button>
+
+
+                    <button
+                        id="stop-camera"
+                        class="secondary-button">
+
+                        Stop
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- OUTPUT -->
+
+            <div class="output-container">
+
+                <div class="output-header">
+
+                    <span>
+                        DETECTED LANGUAGE
+                    </span>
+
+                    <span>
+                        ASL
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="recognized-text"
+                    class="recognized-text">
+
+                    Waiting for signs...
+
+                </div>
+
+
+                <div class="output-actions">
+
+                    <button
+                        id="speak-button"
+                        class="primary-button">
+
+                        Speak
+
+                    </button>
+
+
+                    <button
+                        id="clear-button"
+                        class="secondary-button">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+
+                <div class="detection-info">
+
+                    <div>
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <strong id="detection-status">
+                            Waiting
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            MODEL
+                        </span>
+
+                        <strong>
+                            Not connected
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MOBILE NAVIGATION
+    ========================== -->
+
+    <nav class="mobile-nav">
+
+        <a
+            href="../index.html"
+            class="mobile-nav-item">
+
+            <span>⌂</span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="asl-to-speech.html"
+            class="mobile-nav-item active">
+
+            <span>◉</span>
+
+            <small>
+                ASL
+            </small>
+
+        </a>
+
+
+        <a
+            href="speech-to-asl.html"
+            class="mobile-nav-item">
+
+            <span>◌</span>
+
+            <small>
+                Speech
+            </small>
+
+        </a>
+
+    </nav>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/asl-to-speech.js"></script>
+
+</body>
+
+</html>

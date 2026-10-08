@@ -1,0 +1,522 @@
+/* =========================
+   MODE PAGE
+========================= */
+
+.mode-page {
+    min-height: 100vh;
+
+    padding: 150px 6% 80px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.mode-header {
+    max-width: 900px;
+
+    margin-bottom: 70px;
+}
+
+.mode-header h1 {
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 30px;
+}
+
+.mode-header > p:last-child {
+    color: #888;
+
+    max-width: 550px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   TRANSLATOR
+========================= */
+
+.translator {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 24px;
+
+    max-width: 1500px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   CAMERA
+========================= */
+
+.camera-container,
+.output-container {
+    background: #111111;
+
+    border: 1px solid #242424;
+}
+
+
+.camera-header,
+.output-header {
+    height: 60px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #242424;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+
+.status {
+    color: #ff5f5f;
+}
+
+
+/* =========================
+   CAMERA VIEW
+========================= */
+
+.camera-view {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    background: #050505;
+
+    overflow: hidden;
+}
+
+.camera-view video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+}
+
+
+.camera-placeholder {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: #777;
+}
+
+
+.camera-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #444;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+.camera-placeholder p {
+    margin-bottom: 5px;
+
+    color: #aaa;
+}
+
+
+.camera-placeholder small {
+    color: #555;
+}
+
+
+/* =========================
+   CAMERA CONTROLS
+========================= */
+
+.camera-controls {
+    padding: 20px 24px;
+
+    display: flex;
+
+    gap: 12px;
+
+    border-top: 1px solid #242424;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button,
+.secondary-button {
+    border: none;
+
+    padding: 14px 22px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.primary-button {
+    background: #7cff6b;
+
+    color: #000;
+}
+
+
+.primary-button:hover {
+    background: #fff;
+}
+
+
+.secondary-button {
+    background: #1c1c1c;
+
+    color: #aaa;
+
+    border: 1px solid #303030;
+}
+
+
+.secondary-button:hover {
+    color: #fff;
+
+    border-color: #555;
+}
+
+
+/* =========================
+   OUTPUT
+========================= */
+
+.output-container {
+    min-height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.recognized-text {
+    flex: 1;
+
+    padding: 40px 30px;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    color: #fff;
+
+    min-height: 250px;
+}
+
+
+.output-actions {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 0 24px 24px;
+}
+
+
+.detection-info {
+    border-top: 1px solid #242424;
+
+    padding: 20px 24px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.detection-info div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.detection-info span {
+    color: #555;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.detection-info strong {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .mode-page {
+        padding: 120px 5% 60px;
+    }
+
+    .mode-header {
+        margin-bottom: 50px;
+    }
+
+    .mode-header h1 {
+        font-size: 58px;
+
+        letter-spacing: -4px;
+    }
+
+    .translator {
+        grid-template-columns: 1fr;
+    }
+
+    .camera-view {
+        aspect-ratio: 4 / 3;
+    }
+
+    .recognized-text {
+        min-height: 180px;
+
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .mode-header h1 {
+        font-size: 48px;
+    }
+
+    .camera-controls,
+    .output-actions {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+    .detection-info {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   SPEECH → ASL
+========================= */
+
+.asl-player {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.player-symbol {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #444;
+
+    color: #7cff6b;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.asl-player p {
+    color: #aaa;
+
+    margin-bottom: 5px;
+}
+
+.asl-player small {
+    color: #555;
+}
+
+
+/* TEXT INPUT */
+
+.speech-input {
+    padding: 25px;
+}
+
+.speech-input textarea {
+    width: 100%;
+
+    min-height: 150px;
+
+    resize: vertical;
+
+    background: #080808;
+
+    border: 1px solid #292929;
+
+    color: #ffffff;
+
+    padding: 18px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.speech-input textarea:focus {
+    border-color: #7cff6b;
+}
+
+.speech-input textarea::placeholder {
+    color: #555;
+}
+
+
+/* MICROPHONE */
+
+.microphone-area {
+    padding: 0 25px 25px;
+
+    text-align: center;
+}
+
+.mic-button {
+    width: 100%;
+
+    min-height: 70px;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    border: 1px solid #303030;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition: 0.2s;
+}
+
+.mic-button:hover {
+    border-color: #7cff6b;
+}
+
+.mic-button.recording {
+    border-color: #ff5f5f;
+
+    color: #ff5f5f;
+}
+
+.mic-icon {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+#mic-status {
+    margin-top: 10px;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .camera-controls {
+        flex-wrap: wrap;
+    }
+
+    .camera-controls button {
+        flex: 1;
+    }
+
+}
